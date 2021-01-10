@@ -156,6 +156,10 @@ header {
         color: #111;
     }
 
+    header nav ul li a.active {
+        color: #ffa800;
+    }
+
     header .header-socials {
         float: right;
         padding-right: 32px;
