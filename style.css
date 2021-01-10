@@ -1,0 +1,238 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* My Styles */
+
+* {
+    text-decoration: none;
+}
+
+body {
+    background-color: #a3a3a3;
+}
+
+header {
+    display: none;
+}
+
+@media only screen and (min-width:1000px) {
+    header {
+        display: block;
+        position: fixed;
+        width: calc(100% - 48px);
+        height: 64px;
+        top: 42px;
+        left: 48px;
+    }
+
+    header .header-logo {
+        font-family: Oswald;
+        font-size: 40px;
+        font-weight: 900;
+        color: #111;
+        text-transform: uppercase;
+        display: block;
+        float: left;
+        padding-right: 32px;
+    }
+
+    header nav ul {
+        float: left;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        text-align: center;
+        float: left;
+        list-style: none;
+        padding: 0 32px;
+        line-height: 40px;
+        height: 40px;
+    }
+
+    header nav ul li a {
+        font-family: Catamaran;
+        font-size: 24px;
+        color: #111;
+    }
+
+    header .header-socials {
+        float: right;
+        padding-right: 32px;
+    }
+
+    header .header-socials a {
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        /* background-color: #FFA800; */
+        background-color: #fff;
+        color: #111;
+        margin-right: 16px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    header .header-socials a:hover {
+        text-decoration: none;
+        background-color: #111;
+        color: #fff;
+    }
+
+    .skip-header {
+        margin-top: calc(42px + 64px); /* Start position of header plus header height */
+    }
+
+    .skip-header .coming-soon-text {
+        font-size: 48px;
+        height: calc(100vh - 106px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* INDEX */
+
+.index-banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+}
+
+.index-banner p {
+    color: #fff;
+    opacity: 0.7;
+    margin-left: 16px;
+}
+
+.vertical-center {
+    display: table-cell;
+    vertical-align: middle;
+    /* Top of this box should be vertically aligned center */
+}
+
+.index-banner p.title {
+    font-family: Oswald;
+    font-size: 38px;
+    padding-right: 25%;
+}
+
+.index-banner p.sub-title {
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: italic;
+    padding-top: 10px;
+}
+
+@media only screen and (min-width:1000px) {
+    .index-banner p {
+        margin-left: 96px;
+    }
+}
