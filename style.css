@@ -259,6 +259,70 @@ header {
     padding-top: 22px;
 }
 
+.index-highlights .highlights-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 74px);
+    justify-content: space-around;
+    padding-top: 22px;
+    /* background-image: url('img/dashed-line.png'); */ /* TODO: Add background dashed line image */
+}
+
+.index-highlights .highlights-item {
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid #fff;
+}
+
+.index-highlights .highlights-item.first {
+    background-color: green;
+    border-top-right-radius: 76px;
+    border-bottom-right-radius: 76px;
+    margin-right: 86px;
+    height: 120px;
+    background-image: url('img/highlights/first.jpg');
+}
+
+.index-highlights .highlights-item.first p.item-title {
+    padding-left: 26px;
+}
+
+.index-highlights .highlights-item.second {
+    background-color: grey;
+    border-top-left-radius: 95px;
+    border-bottom-left-radius: 95px;
+    margin-left: 145px;
+    height: 173px;
+    background-image: url('img/highlights/second.jpg');
+}
+
+.index-highlights .highlights-item.second p.item-title {
+    position: absolute;
+    right: 0px;
+    padding-right: 26px;
+}
+
+.index-highlights .highlights-item.third {
+    background-color: cyan;
+    border-top-right-radius: 113px;
+    border-bottom-right-radius: 113px;
+    margin-right: 118px;
+    height: 225px;
+    background-image: url('img/highlights/third.jpg');
+}
+
+.index-highlights .highlights-item.third p.item-title {
+    padding-left: 26px;
+}
+
+.index-highlights .highlights-item p.item-title {
+    color: white;
+    font-size: 24px;
+    opacity: 0.7;
+    font-family: Oswald;
+    padding-bottom: 4px;
+}
+
 @media only screen and (min-width:1000px) {
     .index-highlights p.title {
         font-size: 40px;
