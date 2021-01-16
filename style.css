@@ -325,9 +325,60 @@ header {
 
 @media only screen and (min-width:1000px) {
     .index-highlights p.title {
-        font-size: 40px;
-        padding-top: 50px;
+        /* font-size: 40px; */
+        /* padding-top: 50px; */
     }
 }
 
+/* INDEX - ABOUT */
 
+.index-about {
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
+
+.index-about p.title {
+    color: #fff;
+    font-size: 30px;
+    font-family: Oswald;
+    text-align: center;
+    padding-top: 22px;
+}
+
+.index-about .about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto 20px auto;
+}
+
+.index-about .about-description {
+    color: #fff;
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 100;
+    text-align: center;
+    margin-left: 36px;
+    margin-right: 36px;
+}
+
+.index-about .about-socials {
+    display: flex;
+    justify-content: center;
+}
+
+.index-about .about-socials a {
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* background-color: #FFA800; */
+    background-color: #fff;
+    color: #111;
+    margin: 11px 8px;
+    transition: all 0.3s ease-in-out;
+}
