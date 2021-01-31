@@ -1,0 +1,48 @@
+<ng-container *ngIf="id$ | async"></ng-container>
+
+<!--Close button-->
+<div class="close-btn">
+    <button mat-icon-button (click)="close()"><mat-icon>close</mat-icon></button>
+</div>
+
+<!--Video Title-->
+<div class="desktop-title">
+    <span>{{ currentVideo.title }}</span>
+</div>
+
+<!--Video view with next and previous buttons-->
+<div class="video-container">
+    <div class="video" [style.background-image]="currentBackgroundUrl">
+        <button mat-icon-button class="previous-btn" (click)="previous()"><mat-icon>chevron_left</mat-icon></button>
+        <button mat-icon-button class="next-btn" (click)="next()"><mat-icon>chevron_right</mat-icon></button>
+    </div>
+    <div class="info">
+        <span class="desktop-description">{{ currentVideo.description }}</span>
+        <div class="location-info">
+            <span class="location">location</span>
+            <div class="map">map</div>
+        </div>
+    </div>
+
+</div>
+
+<!--Small thumbnail carousel-->
+<div class="carousel">
+    <div *ngFor="let video of videos" class="cell">
+        <img [src]="video.thumbnailPath" (click)="thumbnailClicked(video)" [ngClass]="{ 'active': currentVideo.id === video.id }">
+    </div>
+</div>
+
+<!--Video Title-->
+<div class="mobile-title">
+    <span>{{ currentVideo.title }}</span>
+</div>
+
+<!--Video Description-->
+<div class="mobile-description">
+    <span>{{ currentVideo.description }}</span>
+</div>
+
+<!--Video Location (desktop only)-->
+
+<!--Video Map (desktop only)-->

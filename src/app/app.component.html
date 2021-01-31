@@ -1,0 +1,7 @@
+<ng-container *ngIf="activeMenuItem$ | async"></ng-container>
+
+<app-navigation-header [lightMenuText]="lightMenuText" *ngIf="!hideMenu"></app-navigation-header>
+
+<router-outlet></router-outlet>
+
+<app-navigation-footer></app-navigation-footer>

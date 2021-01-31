@@ -1,0 +1,150 @@
+:host {
+    min-height: 100vh;
+    background-color: #111;
+    display: block;
+}
+
+.close-btn {
+    float: right;
+    margin-top: 8px;
+}
+
+mat-icon {
+    color: white;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+}
+
+.video-container {
+    height: 15rem;
+    padding-top: 7.5rem;
+
+    .info {
+        display: none;
+    }
+}
+
+.video {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+
+    .cell {
+        margin: 16px 8px;
+        cursor: pointer;
+
+        img {
+            width: 50px;
+            height: 50px;
+            border: 1px solid white;
+            opacity: 0.5;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.desktop-title {
+    display: none;
+}
+
+.mobile-title {
+    padding: 0 1rem;
+    span {
+        color: white;
+        font-family: Oswald;
+        font-size: 28px;
+    }
+}
+
+.mobile-description {
+    padding: 20px 1rem;
+    span {
+        color: white;
+        font-family: Roboto;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width:1000px) {
+
+    .desktop-title {
+        display: block;
+        text-align: center;
+        padding-top: 4rem;
+
+        span {
+            color: white;
+            font-family: Oswald;
+            font-size: 28px;
+        }
+    }
+
+    .mobile-title {
+        display: none;
+    }
+
+    .mobile-description {
+        display: none;
+    }
+
+    .video-container {
+        padding-top: 4rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        width: calc(100% - 16rem);
+        height: 32rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .video {
+            flex: 1;
+        }
+
+        .info {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            justify-content: space-between;
+            color: white;
+            overflow: auto;
+
+            .desktop-description {
+                font-family: Roboto;
+                font-size: 18px;
+                width: 25rem;
+            }
+
+            .location-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 10rem;
+            }
+        }
+    }
+
+    .carousel {
+        padding-left: 4rem;
+        justify-content: center;
+    }
+
+}
+

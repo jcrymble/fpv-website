@@ -1,0 +1,15 @@
+<ng-container *ngIf="activeItem$ | async"></ng-container>
+
+<span class="header-logo" (click)="navigate(navItems[0])" [ngClass]="{ 'light': lightMenuText }">JC Logo</span>
+<nav>
+    <ul>
+        <li *ngFor="let item of navItems">
+            <span [ngClass]="{ 'light': lightMenuText, 'active': item === activeItem }" (click)="navigate(item)">{{ item.displayName }}</span>
+        </li>
+
+    </ul>
+    <div class="header-socials">
+        <a href="https://www.instagram.com/jackcrymble/" target="_blank"><i class="mdi mdi-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UC-eZjP-3OLRk18Ce-AvRwAA" target="_blank"><i class="mdi mdi-youtube"></i></a>
+    </div>
+</nav>

@@ -1,0 +1,112 @@
+:host {
+    height: 100vh;
+    display: block;
+    background-color: #111;
+}
+
+.title {
+    color: #fff;
+    font-size: 30px;
+    font-family: Oswald;
+    text-align: center;
+    padding-top: 22px;
+}
+
+form {
+    padding: 2rem;
+}
+
+.label {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 3rem;
+
+    input {
+        border: 1px solid white;
+        background-color: #111;
+        border-radius: 1rem;
+        height: 2rem;
+        color: white;
+
+        &.lrg {
+            height: 6rem;
+        }
+    }
+}
+
+::ng-deep {
+    .mat-checkbox .mat-checkbox-frame {
+        border-color: white;
+    }
+
+    .mat-checkbox-checked.mat-accent {
+
+        .mat-checkbox-ripple .mat-ripple-element {
+            opacity: 0.03 !important;
+            background-color: #ffa800!important;
+        }
+
+        .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+            background-color: #ffa800;
+
+            svg path.mat-checkbox-checkmark-path {
+                stroke: #111 !important;
+            }
+        }
+    }
+}
+
+.captcha {
+    color: white;
+}
+
+.submit-btn {
+    float: right;
+    background-color: #ffa800;
+    border-radius: 1rem;
+    height: 3rem;
+    width: 8rem;
+    font-size: 24px;
+    font-family: Oswald;
+}
+
+@media only screen and (min-width:1000px) {
+
+    .title {
+        display: none;
+    }
+
+    .background {
+        position: fixed;
+        width: calc(80% - 10rem);
+        height: calc(100% - 10rem);
+        padding-top: 2rem;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to left, #111 7%, transparent 30%),
+                linear-gradient(to right, #111 7%, transparent 15%),
+                linear-gradient(to top, #111 7%, transparent 15%),
+                linear-gradient(to bottom, #111 7%, transparent 15%),
+                url('/assets/city_hall.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    form {
+        position: relative;
+        max-width: 30%;
+        margin-left: auto;
+        padding-right: 10rem;
+        padding-top: 10rem;
+    }
+
+    .submit-btn {
+        width: 15rem;
+    }
+}
+

@@ -1,0 +1,27 @@
+<div class="app-fake-header"></div>
+
+<p class="title">Contact</p>
+
+<div class="background">
+    <div class="image"></div>
+</div>
+
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+
+    <label class="label">
+        Name
+        <input type="text" formControlName="name">
+    </label>
+    <label class="label">
+        Email
+        <input type="email" formControlName="email">
+    </label>
+    <label class="label">
+        Send me a message
+        <input type="text" class="lrg" formControlName="message">
+    </label>
+
+    <mat-checkbox class="captcha">I am not a Robot</mat-checkbox>
+
+    <button mat-raised-button class="submit-btn" type="submit">Send</button>
+</form>

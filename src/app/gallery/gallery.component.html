@@ -1,0 +1,9 @@
+
+<div class="app-fake-header"></div>
+
+<p class="title">Gallery</p>
+
+<!-- Mosaic display  -->
+<div class="mosaic">
+    <img *ngFor="let image of images" [src]="image.thumbnailPath" (click)="openImage(image.id)">
+</div>

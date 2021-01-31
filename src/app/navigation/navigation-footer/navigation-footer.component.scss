@@ -1,0 +1,40 @@
+.container {
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background-color: white;
+}
+
+.align-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+::ng-deep .item .mat-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    opacity: 0.3;
+
+    &.active {
+        opacity: 1;
+    }
+
+    .text {
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    .container {
+        display: none;
+    }
+}

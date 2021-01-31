@@ -1,0 +1,7 @@
+<ng-container *ngIf="activeItem$ | async"></ng-container>
+<div class="container align-bottom">
+    <button mat-icon-button *ngFor="let item of navItems" class="item" [ngClass]="{ 'active': item === activeItem }" (click)="navigate(item)">
+        <mat-icon>{{ item.icon }}</mat-icon>
+        <span class="text">{{ item.displayName }}</span>
+    </button>
+</div>
