@@ -1,0 +1,4 @@
+ng build --prod --baseHref="https://jackcrymble.com/" --output-path="dist/"
+
+ngh --no-silent
+
