@@ -10,6 +10,8 @@ export class NavigationService {
 
     private _navItems: Array<NavItemI>;
     private _activeNavItem: BehaviorSubject<NavItemI>;
+    private LS_PREFIX = 'JCFPVLS';
+    private _LS_VIEWER = this.LS_PREFIX + '-source';
 
     constructor(private router: Router) {
         this._navItems = NAV_ITEMS;
@@ -18,6 +20,10 @@ export class NavigationService {
 
     get navItems(): Array<NavItemI> {
         return this._navItems;
+    }
+
+    get LS_VIEWER_KEY(): string {
+        return this._LS_VIEWER;
     }
 
     private get initialActiveNavItem(): NavItemI {

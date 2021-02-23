@@ -21,7 +21,7 @@ export class GalleryComponent implements OnInit {
         this.images = this.videoService.getAll();
     }
 
-    openImage(id: string): void {
+    openVideo(id: string): void {
         this.navigationService.navigate({icon: '', navigateTo: `gallery/viewer/${id}`, displayName: 'Viewer'});
     }
 

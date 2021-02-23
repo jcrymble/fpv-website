@@ -1,28 +1,12 @@
 <section class="index-highlights">
     <p class="title">Highlights</p>
     <div class="highlights-container">
-        <div class="highlights-item">
-            <div class="first">
-                <p class="item-title">Woodlands</p>
+        <div *ngFor="let highlight of highlights; let index = index" class="highlights-item" (click)="openViewer(highlight)">
+            <div [ngClass]="indexToString(index)" [ngStyle]="{'background-image': 'url(' + backgroundImageString(index) + ')'}">
+                <p class="item-title">{{ highlight.title }}</p>
             </div>
-            <p class="desktop-title">Woodlands</p>
-            <p class="desktop-description">Description</p>
-        </div>
-
-        <div class="highlights-item">
-            <div class="second">
-                <p class="item-title">Mountains</p>
-            </div>
-            <p class="desktop-title">Mountains</p>
-            <p class="desktop-description">Description</p>
-        </div>
-
-        <div class="highlights-item">
-            <div class="third">
-                <p class="item-title">Tropical</p>
-            </div>
-            <p class="desktop-title">Tropical</p>
-            <p class="desktop-description">Description</p>
+            <p class="desktop-title">{{ highlight.title }}</p>
+            <p class="desktop-description">{{ highlight.description_long }}</p>
         </div>
     </div>
 </section>

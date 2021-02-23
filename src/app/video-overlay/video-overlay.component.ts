@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -25,12 +26,12 @@ export class VideoOverlayComponent implements OnInit {
 
     id$ = this.activatedRoute.paramMap.pipe(
         tap((params: ParamMap) => {
-            this.currentVideo = this.videoService.get(+params.get('id'))
+            this.currentVideo = this.videoService.get(+params.get('id'));
         })
-    )
+    );
 
     get currentBackgroundUrl(): string {
-        return `url(${this.currentVideo.thumbnailPath})`
+        return `url(${this.currentVideo.thumbnailPath})`;
     }
 
     ngOnInit(): void {
@@ -56,6 +57,10 @@ export class VideoOverlayComponent implements OnInit {
 
     thumbnailClicked(video: VideoI): void {
         this.currentVideo = video;
+    }
+
+    url(): SafeResourceUrl {
+        return this.videoService.getSanitisedURL(this.currentVideo);
     }
 
 }

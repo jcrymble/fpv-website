@@ -32,7 +32,6 @@
         border-bottom-right-radius: 76px;
         margin-right: 86px;
         height: 120px;
-        background-image: url('/assets/gallery/first.jpg');
         border: 1px solid #fff;
         border-left: none;
 
@@ -48,7 +47,6 @@
         border-bottom-left-radius: 95px;
         margin-left: 145px;
         height: 173px;
-        background-image: url('/assets/gallery/second.jpg');
         border: 1px solid #fff;
         border-right: none;
 
@@ -66,7 +64,6 @@
         border-bottom-right-radius: 113px;
         margin-right: 118px;
         height: 225px;
-        background-image: url('/assets/gallery/third.jpg');
         border: 1px solid #fff;
         border-left: none;
 
@@ -100,11 +97,16 @@
     }
 
     .highlights-item {
+        cursor: pointer;
+        width: 20rem;
+        height: 20rem;
+
         .first {
             width: 20rem;
             height: 20rem;
             border-radius: 50%;
-            margin: unset;
+            border-left: 1px solid white;
+            margin-right: unset;
 
             .item-title {
                 display: none;
@@ -115,6 +117,7 @@
             width: 20rem;
             height: 20rem;
             border-radius: 50%;
+            border-right: 1px solid white;
             margin: unset;
 
             .item-title {
@@ -126,7 +129,8 @@
             width: 20rem;
             height: 20rem;
             border-radius: 50%;
-            margin: unset;
+            border-left: 1px solid white;
+            margin: auto;
 
             .item-title {
                 display: none;

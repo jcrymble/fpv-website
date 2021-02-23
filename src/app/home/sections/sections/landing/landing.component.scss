@@ -26,9 +26,10 @@
 
 .index-banner p.title {
     font-family: Oswald;
-    font-size: 38px;
+    font-size: 40px;
     line-height: 2.5rem;
     padding-right: 25%;
+    opacity: 0.7;
 }
 
 .index-banner p.sub-title {
@@ -36,9 +37,10 @@
     font-size: 18px;
     font-style: italic;
     padding-top: 10px;
+    opacity: 0.7;
 }
 
-@media only scr0pxeen and (min-width:1000px) {
+@media only screen and (min-width:1000px) {
     .index-banner p {
         margin-left: 96px;
     }
