@@ -18,7 +18,6 @@ import { ContactComponent } from './contact/contact.component';
 import { NavigationFooterComponent } from './navigation/navigation-footer/navigation-footer.component';
 import { NavigationHeaderComponent } from './navigation/navigation-header/navigation-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -43,9 +42,6 @@ import { AgmCoreModule } from '@agm/core';
       MatButtonModule,
       MatIconModule,
       MatCheckboxModule,
-      AgmCoreModule.forRoot({
-        apiKey: 'AIzaSyD6Ln63nB7Gq9AT7rxD05t2oqTN4zBFq88'
-      })
   ],
   providers: [],
   bootstrap: [AppComponent]
